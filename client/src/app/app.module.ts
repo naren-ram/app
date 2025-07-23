@@ -1,17 +1,23 @@
-// src/app/app.module.ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { EducationFormComponent } from './education-form/education-form.component';
-import { RouterModule } from '@angular/router';
 
+import { AppComponent } from './app.component';
+import { RecommendationFormComponent } from './recommendation-form/recommendation-form.component';
 
 @NgModule({
-  declarations: [AppComponent, EducationFormComponent],
-  imports: [BrowserModule, FormsModule, HttpClientModule, RouterModule.forRoot([])],
+  declarations: [
+    AppComponent,
+    RecommendationFormComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {}  

@@ -1,0 +1,24 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <label>Form Type:</label>
+  <select formControlName="formType">
+    <option value="Education-NGO">Education NGO</option>
+    <option value="Education-Individual">Education Individual</option>
+    <option value="Medical">Medical</option>
+    <option value="CSR">CSR</option>
+    <option value="LaptopRequest">Laptop Request</option>
+  </select>
+
+  <input formControlName="beneficiaryName" placeholder="NGO/Beneficiary Name" />
+  <input formControlName="contactNumber" placeholder="Contact Number" />
+  <input formControlName="requestedAmount" placeholder="Requested Amount" type="number" />
+  <input formControlName="ddFavouring" placeholder="Account Name for DD" />
+  <textarea formControlName="justification" placeholder="Justification"></textarea>
+
+  <div formGroupName="supportingDocs">
+    <input formControlName="profileOfNGO" placeholder="Profile of NGO" />
+    <input formControlName="requestLetter" placeholder="Original Request Letter" />
+    <input formControlName="registrationCertificate" placeholder="NGO Registration Certificate" />
+  </div>
+
+  <button type="submit">Submit</button>
+</form>
